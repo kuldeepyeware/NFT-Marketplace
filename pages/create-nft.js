@@ -27,7 +27,6 @@ export default function CreateItem() {
         const res = await axios.post(urls, formData, {
           headers: {
             Accept: "text/plain",
-            "Content-Type": `multipart/form-data; boundary= ${formData._boundary}`,
             pinata_api_key: process.env.NEXT_PUBLIC_API_Key,
             pinata_secret_api_key: process.env.NEXT_PUBLIC_API_Secret,
           },
