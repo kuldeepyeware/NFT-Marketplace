@@ -6,7 +6,7 @@ import Web3Modal from "web3modal";
 
 import { marketplaceAddress } from "../config";
 
-import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NfTMarketplace.json";
+import NFTMarketplace from "../NFTMarketplace.json";
 
 export default function Home() {
   const [nfts, setNfts] = useState([]);
@@ -16,11 +16,7 @@ export default function Home() {
   }, []);
 
   const loadNfts = async () => {
-    // const provider = new ethers.providers.JsonRpcProvider(
-    //   "https://polygon-mumbai.g.alchemy.com/v2/M11RVlIjGI9JDVpBN39Ncggr_KHwnQSA"
-    // );
     const provider = new ethers.providers.Web3Provider(ethereum);
-    // const signer = provider.getSigner();
     const contract = new ethers.Contract(
       marketplaceAddress,
       NFTMarketplace.abi,

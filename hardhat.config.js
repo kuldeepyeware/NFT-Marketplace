@@ -10,7 +10,9 @@ module.exports = {
   networks: {
     sepolia: {
       url: "https://eth-sepolia.g.alchemy.com/v2/FlXc1GV6448rw5v9mgA1sqZkYdrBRtX_",
-      accounts: [process.env.Wallet_Private_Key],
+      accounts: [
+        "32806b88289298e466623781e21d937a4e30c4616ac46b4bd1bb62a0d05ce7a1",
+      ],
     },
   },
 };
