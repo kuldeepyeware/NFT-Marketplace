@@ -26,10 +26,10 @@ export default function CreateItem() {
         const urls = `https://api.pinata.cloud/pinning/pinFileToIPFS`;
         const res = await axios.post(urls, formData, {
           headers: {
+            Accept: "text/plain",
             "Content-Type": `multipart/form-data; boundary= ${formData._boundary}`,
             pinata_api_key: process.env.NEXT_PUBLIC_API_Key,
             pinata_secret_api_key: process.env.NEXT_PUBLIC_API_Secret,
-            Accept: "text/plain",
           },
         });
 
@@ -54,9 +54,9 @@ export default function CreateItem() {
       const urls = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
       const res = await axios.post(urls, data, {
         headers: {
+          Accept: "text/plain",
           pinata_api_key: process.env.NEXT_PUBLIC_API_Key,
           pinata_secret_api_key: process.env.NEXT_PUBLIC_API_Secret,
-          Accept: "text/plain",
         },
       });
       const url = `https://gateway.pinata.cloud/ipfs/${res.data.IpfsHash}`;
