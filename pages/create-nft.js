@@ -29,6 +29,7 @@ export default function CreateItem() {
             "Content-Type": `multipart/form-data; boundary= ${formData._boundary}`,
             pinata_api_key: process.env.NEXT_PUBLIC_API_Key,
             pinata_secret_api_key: process.env.NEXT_PUBLIC_API_Secret,
+            Accept: "text/plain",
           },
         });
 
