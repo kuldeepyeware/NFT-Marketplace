@@ -1,7 +1,5 @@
 # NFT Marketplace using Next.js, Solidity, Hardhat, Ethers.js, OpenZeppelin Contracts and Tailwind CSS
 
-Project is deployed [Here]()
-
 This is a NFT Marketplace which is created with the help of following Youtube Video [Tutorial](https://youtu.be/GKJBEEXUha0) built with the following technologies:
 
 - <a href="https://nextjs.org/" target="_blank">Next.js</a> - React framework for building server-side rendered (SSR) web applications.
